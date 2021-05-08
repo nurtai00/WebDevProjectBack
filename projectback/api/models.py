@@ -32,7 +32,7 @@ class Cart(models.Model):
     username = models.CharField(max_length=50)
     address = models.TextField()
     book = models.ForeignKey(Product, null=True, on_delete=models.CASCADE, blank=True)
-1
+
 
 class User(models.Model):
     username = models.CharField(max_length=20)

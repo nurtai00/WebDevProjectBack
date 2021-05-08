@@ -1,5 +1,3 @@
-from abc import ABC
-
 from rest_framework import serializers
 from api.models import Category, Product, Cart, User
 
@@ -10,13 +8,13 @@ class CategoryModelSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description')
 
 
-class ProductSerializer(serializers.Serializer, ABC):
+class ProductSerializer(serializers.Serializer):
     class Meta:
         model = Product
         fields = ('name', 'description', 'price', 'category')
 
 
-class CartSerializer(serializers.Serializer, ABC):
+class CartSerializer(serializers.Serializer):
     class Meta:
         model = Cart
         fields = ('username', 'address', 'book')
